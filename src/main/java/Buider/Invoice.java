@@ -1,5 +1,6 @@
 package Buider;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class Invoice {
     
     public Invoice (int id ) {
         this.id = id;
+        this.shop = new ArrayList<Shopping>();
     }
     
     public void SetId(int id) {
@@ -35,8 +37,8 @@ public class Invoice {
         this.client = client;
     }
     
-    public void setShop(List<Shopping> shop) {
-        this.shop = shop;
+    public void setShop(Shopping shop) {
+        this.shop.add(shop);
     }
     
     public void addShop(Shopping shop) {
@@ -61,5 +63,9 @@ public class Invoice {
     
     public Shopping getShopping(int idShopping) {
         return this.shop.get(idShopping);
+    }
+    
+    public List<Shopping> getShoppingList(){
+        return this.shop;
     }
 }

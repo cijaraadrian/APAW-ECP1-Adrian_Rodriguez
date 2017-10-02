@@ -1,5 +1,6 @@
 package Buider;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,16 +14,17 @@ public class InvoiceBuilder {
     
     public InvoiceBuilder() {
         this.id = 0;
+        this.shop = new ArrayList<Shopping>();
         this.invoice = new Invoice(this.id);
     }
     
     public InvoiceBuilder(int id) {
         this.id = id;
+        this.shop = new ArrayList<Shopping>();
         this.invoice = new Invoice (id);
-        this.invoice.setShop(this.shop);
     }
     
-    public InvoiceBuilder total(int total) {
+    public InvoiceBuilder total(double total) {
         this.invoice.setTotal(total);
         return this;
     }
@@ -38,7 +40,8 @@ public class InvoiceBuilder {
     }
     
     public InvoiceBuilder shop(Shopping shop) {
-        this.invoice.setShop(this.shop);
+        this.shop.add(shop);
+        this.invoice.setShop(shop);
         return this;
     }
     
