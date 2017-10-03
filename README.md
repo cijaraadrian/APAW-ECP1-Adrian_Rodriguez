@@ -10,7 +10,7 @@ Este patrón define un conjunto de algoritmos o comportamientos, encapsula cada 
 
 Se apoya en un contexto, un interface o clase abstracta y las distintas implementaciones del objeto y su comportamiento.
 
-En nuestro ejercicio Invoice-Shopping trataremos de aplicar Strategy para que el metodo CREATE(), realize una creacion del objeto predefinida. Los distintos comportamientos seran que al atributo total (que sera el valor de la suma del atributo cost de cada elemento de la lista List<Shopping>) se le aplicara un porcentaje predeterminado en un atributo llamado IVA y el otro comportamiento que se implementa es la creacion de un invoice basica.
+En nuestro ejercicio Invoice-Shopping trataremos de aplicar Strategy para que el metodo setIva(), realize un caculo del atributo total aplicando el 21 % o el 10 %
 
 En detalle :
 
@@ -22,7 +22,7 @@ La clase Invoice21
 	añadimos el atributo iva = 21
 	El comportamiento de CREATE lo redefinimos y tras la creacion de un objeto predeterminado aplicamos a total el porcetaje almacenado en el atributo IVA.
 
-La clase Invoice
-	Crea un objeto inicializando los valores a 0 y una lista vacia.
+La clase Invoice10
+	Aplicara un 10 %
 
 
