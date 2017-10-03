@@ -1,12 +1,11 @@
-package Buider;
+package Strategy;
 
-
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import Buider.Shopping;
 
-public class Invoice {
+public abstract class AbstractInvoid {
 
     private int id;
 
@@ -18,10 +17,7 @@ public class Invoice {
 
     private List<Shopping> shop;
 
-    public Invoice(int id) {
-        this.id = id;
-        this.shop = new ArrayList<Shopping>();
-    }
+    public abstract String setIva();
 
     public void SetId(int id) {
         this.id = id;
@@ -47,32 +43,12 @@ public class Invoice {
         this.shop.add(this.shop.size() + 1, shop);
     }
 
-    public int getId() {
-        return this.id;
+    public List<Shopping> getListShop() {
+        return this.shop;
     }
 
     public double getTotal() {
         return this.total;
     }
 
-    public Date getDate() {
-        return this.date;
-    }
-
-    public String getClient() {
-        return this.client;
-    }
-
-    public Shopping getShopping(int idShopping) {
-        return this.shop.get(idShopping);
-    }
-
-    public List<Shopping> getShoppingList() {
-        return this.shop;
-    }
-
-    public void write() {
-        System.out.println("I am invoice");
-        
-    }
 }
