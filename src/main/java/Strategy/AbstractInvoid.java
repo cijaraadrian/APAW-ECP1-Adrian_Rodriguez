@@ -17,7 +17,7 @@ public abstract class AbstractInvoid {
 
     private List<Shopping> shop;
 
-    public abstract void setIva();
+    public abstract String setIva();
 
     public void SetId(int id) {
         this.id = id;

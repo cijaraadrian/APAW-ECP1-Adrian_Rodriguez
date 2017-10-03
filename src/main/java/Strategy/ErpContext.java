@@ -8,8 +8,8 @@ public class ErpContext {
         this.invoice = invoice;
     }
 
-    public void setIva() {
-        invoice.setIva();
+    public String setIva() {
+        return invoice.setIva();
     }
 
 }
