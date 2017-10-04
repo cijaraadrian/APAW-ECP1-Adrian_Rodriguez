@@ -1,4 +1,4 @@
-# Forja
+# Patrones de diseño
 #### Asignatura: *Ingeniería Web: Arquitectura y patrones de diseño*
 #### [Máster en Ingeniería Web por la U.P.M.](http://miw.etsisi.upm.es)
 
