@@ -1,12 +1,12 @@
-package Buider;
-
+package Factory_Singleton;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import Buider.Shopping;
 
-public class Invoice {
+public class Invoice1 extends AbstractInvoice {
 
     private int id;
 
@@ -18,7 +18,11 @@ public class Invoice {
 
     private List<Shopping> shop;
 
-    public Invoice(int id) {
+    public Invoice1() {
+        this.id = 0;
+    }
+
+    public Invoice1(int id) {
         this.id = id;
         this.shop = new ArrayList<Shopping>();
     }
@@ -71,8 +75,8 @@ public class Invoice {
         return this.shop;
     }
 
+    @Override
     public void write() {
-        System.out.println("I am invoice");
-        
+        System.out.println("I am Invoice1");
     }
 }
